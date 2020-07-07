@@ -90,7 +90,11 @@ const Home = () => {
             />
             <CardContent>{song.artist.name}</CardContent>
             <CardContent>{song.album.title}</CardContent>
-            
+            <CardContent>
+              <audio src={
+                song.preview
+                } controls />
+            </CardContent>
             <CardActions>
               <Button
                 size="small"

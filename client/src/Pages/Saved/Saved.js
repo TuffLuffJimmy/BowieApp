@@ -58,6 +58,11 @@ const Saved = () => {
             title={song.artist}
           />
           <CardContent>{song.album}</CardContent>
+          <CardContent>
+            <audio src={
+              song.preview
+            } controls />
+          </CardContent>
           <CardActions>
             <Button
               size="small"
