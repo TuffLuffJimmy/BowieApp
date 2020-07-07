@@ -46,13 +46,13 @@ const Home = () => {
   songState.handleSaveSong = (song) => {
     // COME BACK TO THIS
     axios.post('/api/songs', {
-      // id: song.id,
-      // title: song.title,
-      // artist: song.artist.name,
-      // album: song.album.name,
-      // album_art: song.album.cover_medium,
-      // preview: song.preview
-      // link: song.link
+      id: song.id,
+      title: song.title,
+      artist: song.artist.name,
+      album: song.album.name,
+      album_art: song.album.cover_medium,
+      preview: song.preview,
+      link: song.link
     })
       .then(() => {
         const songs = songState.songs
@@ -90,6 +90,7 @@ const Home = () => {
             />
             <CardContent>{song.artist.name}</CardContent>
             <CardContent>{song.album.title}</CardContent>
+            
             <CardActions>
               <Button
                 size="small"
