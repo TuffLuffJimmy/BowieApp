@@ -10,4 +10,4 @@ const songSchema = new Schema({
   link: String,
 })
 
-module.exports = model('Song', bookSchema)
+module.exports = model('Song', songSchema)
