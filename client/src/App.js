@@ -4,16 +4,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-// import Home from './Pages/Home'
-// import Saved from './Pages/Saved'
-// import Navbar from './components/Navbar'
+import Home from './Pages/Home'
+import Saved from './Pages/Saved'
+import Navbar from './components/Navbar'
 import Container from '@material-ui/core/Container'
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* <Container>
+        <Container>
           <Navbar />
           <Switch>
             <Route exact path="/">
@@ -23,7 +23,7 @@ const App = () => {
               <Saved />
             </Route>
           </Switch>
-        </Container> */}
+        </Container>
       </div>
     </Router>
   )
