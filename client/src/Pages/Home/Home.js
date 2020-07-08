@@ -19,6 +19,19 @@ const useStyles = makeStyles({
     height: 250,
     width: 250,
   },
+  search: {
+    border: "5px solid rgba(152, 67, 255, 0.2)",
+    borderRadius: 10,
+    backgroundSize: "cover",
+    backgroundColor: "white",
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: 'white'
+  },
+  btn: {
+    backgroundColor: "black",
+    color: 'white'
+  }
 })
 
 const Home = () => {
@@ -64,14 +77,14 @@ const Home = () => {
   return (
     <>
       <form onSubmit={songState.handleSearchSong}>
-        <TextField
-          label="Search Deezer Songs"
+        <TextField className={classes.search}
+          label="Let's find a song"
           variant="outlined"
           name="search"
           value={songState.search}
           onChange={songState.handleInputChange}
         />
-        <Button
+        <Button className={classes.btn}
           variant="outlined"
           color="primary"
           onClick={songState.handleSearchSong}
@@ -93,7 +106,7 @@ const Home = () => {
             <CardContent>
               <audio src={
                 song.preview
-                } controls />
+              } controls />
             </CardContent>
             <CardActions>
               <Button
